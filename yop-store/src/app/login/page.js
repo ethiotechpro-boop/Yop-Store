@@ -104,7 +104,7 @@ export default function AdminLogin() {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="admin@yopstore.com"
+                placeholder=""
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className={`${inputBase} ${error ? 'border-red-500/50' : 'border-slate-700'}`}
@@ -122,7 +122,7 @@ export default function AdminLogin() {
                   type={showPass ? 'text' : 'password'}
                   required
                   autoComplete="current-password"
-                  placeholder="••••••••"
+                  placeholder=""
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                   className={`${inputBase} pr-11 ${error ? 'border-red-500/50' : 'border-slate-700'}`}
