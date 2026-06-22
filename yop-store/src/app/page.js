@@ -48,7 +48,7 @@ function ProductImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setErrored(true)}
-      className="w-full object-contain bg-slate-900"
+      className="w-full max-h-64 object-contain bg-slate-900"
     />
   );
 }
@@ -586,51 +586,6 @@ export default function YopStore() {
 
         {/* ── Right Sidebar (1/3) ───────────────────────────────────── */}
         <aside className="lg:w-80 xl:w-96 shrink-0 flex flex-col gap-6">
-
-          {/* Sidebar header */}
-          <div className="rounded-2xl bg-slate-800 p-5 border border-slate-700">
-            <h3 className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">
-              Featured Items
-            </h3>
-
-            {productsLoading && (
-              <div className="flex flex-col gap-3">
-                {[...Array(3)].map((_, i) => (
-                  <div key={i} className="flex gap-3 animate-pulse">
-                    <div className="h-14 w-14 rounded-xl bg-slate-700 shrink-0" />
-                    <div className="flex-1 flex flex-col gap-1.5 justify-center">
-                      <div className="h-3 bg-slate-700 rounded w-3/4" />
-                      <div className="h-3 bg-slate-700 rounded w-1/3" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {!productsLoading && sideProducts.length === 0 && mainProducts.length === 0 && (
-              <p className="text-slate-500 text-xs">No featured items yet.</p>
-            )}
-
-            {!productsLoading && products.length > 0 && (
-              <div className="flex flex-col gap-3">
-                {(sideProducts.length > 0 ? sideProducts : mainProducts).slice(0, 5).map((product) => (
-                  <div key={product.id} className="flex gap-3 group cursor-pointer">
-                    <div className="h-14 w-14 rounded-xl overflow-hidden shrink-0 bg-slate-700">
-                      <ProductImage src={product.image_url ?? product.image_urls} alt={product.name} />
-                    </div>
-                    <div className="flex flex-col justify-center gap-0.5 min-w-0">
-                      <p className="text-sm font-semibold text-white truncate group-hover:text-amber-400 transition-colors">
-                        {product.name}
-                      </p>
-                      <p className="text-xs font-bold text-amber-500">
-                        ${parseFloat(product.price).toFixed(2)}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
 
           {/* Promo banner */}
           <div className="rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 p-6 flex flex-col gap-2">
