@@ -22,7 +22,7 @@ function ProductImage({ src, alt }) {
 
   if (!src || errored) {
     return (
-      <div className="h-48 w-full bg-slate-800 flex items-center justify-center">
+      <div className="w-full aspect-[4/3] bg-slate-800 flex items-center justify-center">
         <svg
           className="h-10 w-10 text-slate-600"
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ function ProductImage({ src, alt }) {
       src={src}
       alt={alt}
       onError={() => setErrored(true)}
-      className="h-48 w-full object-cover"
+      className="w-full object-contain bg-slate-900"
     />
   );
 }
