@@ -504,10 +504,10 @@ export default function YopStore() {
       </header>
 
       {/* ── Body ───────────────────────────────────────────────────────── */}
-      <main className="flex-1 max-w-screen-xl mx-auto w-full px-6 py-8 flex flex-col lg:flex-row gap-8">
+      <main className="flex-1 max-w-screen-xl mx-auto w-full px-6 py-8">
 
-        {/* ── Left / Main Section (2/3) ─────────────────────────────── */}
-        <div className="flex-1 flex flex-col gap-8 min-w-0">
+        {/* ── Full-width Main Section ───────────────────────────────── */}
+        <div className="flex flex-col gap-8">
 
           {/* Hero Banner */}
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 border border-slate-800 p-10 flex flex-col gap-4 min-h-[220px] justify-center">
@@ -583,80 +583,6 @@ export default function YopStore() {
             )}
           </div>
         </div>
-
-        {/* ── Right Sidebar (1/3) ───────────────────────────────────── */}
-        <aside className="lg:w-80 xl:w-96 shrink-0 flex flex-col gap-6">
-
-          {/* Promo banner */}
-          <div className="rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 p-6 flex flex-col gap-2">
-            <p className="text-xs font-bold uppercase tracking-widest text-amber-950">Limited Offer</p>
-            <p className="text-xl font-black text-white leading-tight">Up to 30% off<br />Road Bikes</p>
-            <button className="mt-2 w-fit rounded-full bg-white/20 hover:bg-white/30 px-4 py-1.5 text-xs font-bold text-white transition-colors">
-              Shop Now →
-            </button>
-          </div>
-
-          {/* Watermark logo */}
-          <div className="relative rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden p-6 flex flex-col items-start justify-between min-h-[120px]">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">📞</span>
-                <span className="text-sm font-semibold text-white tracking-wide">
-                  Phone: <span className="text-amber-400">+251967647777</span>
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-sky-400 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                </svg>
-                <span className="text-sm font-semibold text-white">
-                  Telegram:{' '}
-                  <a href="https://t.me/yopstore" target="_blank" rel="noopener noreferrer"
-                    className="text-amber-400 hover:text-amber-300 transition-colors">
-                    t.me/yopstore
-                  </a>
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-                </svg>
-                <span className="text-sm font-semibold text-white">
-                  TikTok: <span className="text-amber-400">Yop Store</span>
-                </span>
-              </div>
-            </div>
-            <span
-              className="absolute -bottom-4 -right-2 text-8xl font-black text-slate-800 select-none leading-none"
-              aria-hidden="true"
-            >
-              YOP
-            </span>
-            <span className="relative text-xs text-slate-500 mt-3">© 2025 Yop Store</span>
-          </div>
-
-          {/* Live Chat — sticky on scroll */}
-          <div className="sticky top-24 rounded-2xl bg-slate-800 border border-slate-700 p-5 flex flex-col gap-3">
-            <div className="flex items-center gap-3">
-              <div className="h-9 w-9 rounded-full bg-green-500/20 flex items-center justify-center shrink-0">
-                <span className="text-green-400 text-base">💬</span>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">Live Chat</p>
-                <p className="text-xs text-green-400 flex items-center gap-1">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
-                  Support online now
-                </p>
-              </div>
-            </div>
-            <p className="text-xs text-slate-400">
-              Have a question? Our team is ready to help you find the perfect ride.
-            </p>
-            <button className="rounded-lg bg-amber-500 hover:bg-amber-400 px-4 py-2 text-xs font-bold text-slate-950 transition-colors">
-              Start Conversation
-            </button>
-          </div>
-        </aside>
       </main>
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
